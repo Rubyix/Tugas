@@ -9,6 +9,7 @@ class mahasiswa : public person {
 private:
 	std::string nrp;
 	std::string departemen;
+	std::string matkul;
 	int tahunmasuk;
 	int semesterke;
 	int skslulus;
@@ -17,7 +18,7 @@ private:
 
 public:
 	mahasiswa(std::string id, std::string nama, int dd, int mm, int yy,
-					std::string nrp, std::string departemen, int tahunmasuk);
+					std::string nrp, std::string departemen, int tahunmasuk, std::string matkul);
 
 	void setSemester(int semesterke);
 	int getSemester();
@@ -37,6 +38,9 @@ public:
 	std::string getDepartemen();
 
 	int getTahunMasuk();
+
+	void setMatkul (std::string matkul);
+	std::string getMatkul();
 };
 
 #endif

@@ -41,7 +41,7 @@ int main()
 		switch (menu_terpilih) {
 			case 1:{
                 idMhs++;
-                string id, nama, nrp, departemen;
+                string id, nama, nrp, departemen, matkul;
                 int dd, mm, yy, tahunmasuk;
                 id = idMhs;
                 cout << "Nama Mahasiswa : ";
@@ -60,7 +60,10 @@ int main()
                 getline(cin, departemen);
                 cout << "Tahun Masuk Mahasiswa : ";
                 cin >> tahunmasuk;
-                mahasiswa inputMhs = mahasiswa(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk);
+                cout << "Mata Kuliah Diambil : ";
+                cin.ignore();
+                getline(cin, matkul);
+                mahasiswa inputMhs = mahasiswa(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk, matkul);
                 recMhs.push_back(inputMhs);
             }
 				break;
@@ -120,7 +123,8 @@ int main()
 					cout << "Tanggal/Bulan/Tahun Lahir  :" << recMhs[i].getTglLahir() <<  "/"<<recMhs[i].getBulanLahir()<< "/" << recMhs[i].getTahunLahir() <<endl;
 					cout << "NRP                        :" << recMhs[i].getNRP() << endl;
 					cout << "Departemen                 :" << recMhs[i].getDepartemen() << endl;
-					cout << "Tahun Masuk                :" << recMhs[i].getTahunMasuk() << endl << endl;
+					cout << "Tahun Masuk                :" << recMhs[i].getTahunMasuk() << endl;
+                    cout << "Mata Kuliah Diambil        :" << recMhs[i].getMatkul() << endl << endl;
                 }
             }
 				break;

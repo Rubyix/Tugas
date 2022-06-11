@@ -4,8 +4,8 @@
 
 
 mahasiswa::mahasiswa(std::string id, std::string nama, int dd, int mm, int yy, 
-				std::string nrp, std::string departemen, int tahunmasuk)
-		: person(id, nama, dd, mm, yy), nrp(nrp), departemen(departemen), tahunmasuk(tahunmasuk)
+				std::string nrp, std::string departemen, int tahunmasuk, std::string matkul)
+		: person(id, nama, dd, mm, yy), nrp(nrp), departemen(departemen), tahunmasuk(tahunmasuk), matkul(matkul)
 {
 	this->ipk = 0.0;
 	this->semesterke = 1;
@@ -80,5 +80,13 @@ int mahasiswa::getTahunMasuk()
 	return this->tahunmasuk;
 }
 
+void mahasiswa::setMatkul(std::string matkul)
+{
+	this->matkul = matkul;
+}
 
+std::string mahasiswa::getMatkul()
+{
+	return this->matkul;
+}
 
